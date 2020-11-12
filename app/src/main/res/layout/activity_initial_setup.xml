@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/TextInputLayoutAppearance"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="Enter Company Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/busNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorPrimary"
+                android:textColorHighlight="@color/colorPrimary"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/TextInputLayoutAppearance"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="Enter Bus Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/seatNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorPrimary"
+                android:textColorHighlight="@color/colorPrimary"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/TextInputLayoutAppearance"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="Enter Seat Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorPrimary"
+                android:textColorHighlight="@color/colorPrimary"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/TextInputLayoutAppearance"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="Enter App Exit Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/companyNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorPrimary"
+                android:textColorHighlight="@color/colorPrimary"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_email_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center"
+            android:text="Submit"
+            android:background="@drawable/button_style"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>
