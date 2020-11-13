@@ -2,13 +2,20 @@ package com.techlads.myapplication.ui
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.View
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.techlads.myapplication.R
+import com.techlads.myapplication.api.MediaHandler
 import com.techlads.myapplication.base.BaseActivity
+import com.techlads.myapplication.data.GenericMedia
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.base_header.*
 
 class MainActivity : BaseActivity(), View.OnClickListener {
+
 
     companion object {
 
@@ -16,6 +23,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             return Intent(context, MainActivity::class.java)
         }
     }
+    var handler: MediaHandler? = null
+
 
     override fun getLayout(): Int {
         return R.layout.activity_main
@@ -33,6 +42,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun setup() {
 
     }
+
 
     override fun isHome(): Boolean {
         return true

@@ -2,14 +2,23 @@ package com.techlads.myapplication.ui
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.techlads.myapplication.R
 import com.techlads.myapplication.base.BaseActivity
 import com.techlads.myapplication.data.GenericMedia
 import com.techlads.myapplication.utils.setLayoutManager
 import kotlinx.android.synthetic.main.activity_movies.*
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.util.ArrayList
 
 class MoviesActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked {
+
+    var viewModel: MoviesViewModel? = null
 
     companion object {
         fun start(context: Context) : Intent {
@@ -31,14 +40,27 @@ class MoviesActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked
         setTitle("Box Office")
         setDescription("Hit Movies")
         setupRv()
+        viewModel = ViewModelProvider(this) [MoviesViewModel::class.java]
+
+//        coroutineScope {  }
+
+        lifecycleScope.launch {
+            loadViewModel()
+        }
+    }
+
+    private suspend fun loadViewModel() {
+        viewModel?.loadMovies()?.observe(this, Observer<ArrayList<GenericMedia>> {
+            Log.e("In Observer ", it.toString())
+            adapter?.update(it)
+        })
     }
 
     private fun setupRv() {
         adapter = GenericMediaAdapter(R.layout.one_o_three_card_layout, this)
         moviesRv?.setLayoutManager()
         moviesRv?.adapter = adapter
-
-        adapter?.update(makeMediaList())
+        //adapter?.update(movies)
 
     }
 
