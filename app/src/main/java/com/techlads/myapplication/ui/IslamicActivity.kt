@@ -44,7 +44,7 @@ class IslamicActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicke
         val list = arrayListOf<GenericMedia>()
 
         for (i in 0 until 20) {
-            list.add(GenericMedia(title = "Movie - $i", url = getUrl(i), streamUrl = ""))
+            list.add(GenericMedia(title = "Movie - $i", imageUrl = getUrl(i), streamUrl = ""))
         }
 
         return list

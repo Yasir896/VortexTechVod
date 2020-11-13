@@ -24,7 +24,7 @@ class GenericMediaAdapter(@LayoutRes val layout : Int, var listener: OnRecyclerI
         fun setViewHolder(media: GenericMedia?, listener: OnRecyclerItemClicked) {
             itemView?.cardTitleTv?.text = media?.title
             android.os.Handler(Looper.getMainLooper()).postDelayed({
-                media?.url?.let {
+                media?.imageUrl?.let {
                     itemView?.cardContainerRl?.addOverlayedBackground(it)
                 }
             }, 400)

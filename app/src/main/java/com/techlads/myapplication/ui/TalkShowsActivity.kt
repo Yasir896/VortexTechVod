@@ -6,7 +6,6 @@ import com.techlads.myapplication.R
 import com.techlads.myapplication.base.BaseActivity
 import com.techlads.myapplication.data.GenericMedia
 import com.techlads.myapplication.utils.setLayoutManager
-import kotlinx.android.synthetic.main.activity_movies.*
 import kotlinx.android.synthetic.main.activity_talk_shows.*
 import java.util.ArrayList
 
@@ -45,7 +44,7 @@ class TalkShowsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClic
         val list = arrayListOf<GenericMedia>()
 
         for (i in 0 until 20) {
-            list.add(GenericMedia(title = "Movie - $i", url = getUrl(i), streamUrl = ""))
+            list.add(GenericMedia(title = "Movie - $i", imageUrl = getUrl(i), streamUrl = ""))
         }
 
         return list

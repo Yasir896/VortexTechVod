@@ -2,10 +2,6 @@ package com.techlads.myapplication.ui
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import android.widget.Toast
 import com.techlads.myapplication.R
 import com.techlads.myapplication.base.BaseActivity
 import com.techlads.myapplication.data.GenericMedia
@@ -28,6 +24,7 @@ class MoviesActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked
     }
 
     override fun setEventListeners() {
+
     }
 
     override fun setup() {
@@ -43,14 +40,13 @@ class MoviesActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked
 
         adapter?.update(makeMediaList())
 
-
     }
 
     private fun makeMediaList(): ArrayList<GenericMedia> {
         val list = arrayListOf<GenericMedia>()
 
         for (i in 0 until 20) {
-            list.add(GenericMedia(title = "Movie - $i", url = getUrl(i), streamUrl = "http://ad.vortextech.org/movies/Spies.In.Disguise.mp4" ))
+            list.add(GenericMedia(title = "Movie - $i", imageUrl = getUrl(i), streamUrl = "http://ad.vortextech.org/movies/Spies.In.Disguise.mp4" ))
         }
 
         return list

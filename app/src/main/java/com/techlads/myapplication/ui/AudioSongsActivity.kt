@@ -2,14 +2,11 @@ package com.techlads.myapplication.ui
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import com.techlads.myapplication.R
 import com.techlads.myapplication.base.BaseActivity
 import com.techlads.myapplication.data.GenericMedia
 import com.techlads.myapplication.utils.setLayoutManager
 import kotlinx.android.synthetic.main.activity_audio_songs.*
-import kotlinx.android.synthetic.main.activity_talk_shows.*
 import java.util.ArrayList
 
 class AudioSongsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked {
@@ -46,7 +43,7 @@ class AudioSongsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemCli
         val list = arrayListOf<GenericMedia>()
 
         for (i in 0 until 20) {
-            list.add(GenericMedia(title = "Movie - $i", url = getUrl(i), streamUrl = "" ))
+            list.add(GenericMedia(title = "Movie - $i", imageUrl = getUrl(i), streamUrl = "" ))
         }
 
         return list
