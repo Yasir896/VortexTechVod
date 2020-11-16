@@ -6,7 +6,9 @@ import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.LayoutRes
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +27,7 @@ fun ImageView.loadUrl(url: String) {
     Glide.with(context).load(url).centerCrop().placeholder(R.drawable.defaultimg)
         .error(R.drawable.defaultimg).into(this)
 }
+
 
 
 fun View.addOverlayedBackground(url : String) {

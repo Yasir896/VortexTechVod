@@ -9,11 +9,11 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/homeIv"
-        android:layout_width="80dp"
-        android:layout_height="70dp"
+        android:id="@+id/backBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="?attr/selectableItemBackground"
-        android:src="@drawable/ic_vortex_logo" />
+        android:src="@drawable/ic__circle_arrow_left" />
 
 
     <LinearLayout
@@ -27,11 +27,11 @@
 
 
     <ImageView
-        android:id="@+id/searchIv"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/homeIv"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
         android:background="?attr/selectableItemBackground"
-        android:src="@drawable/ic_search" />
+        android:src="@drawable/ic_vortex_logo" />
 
 
 

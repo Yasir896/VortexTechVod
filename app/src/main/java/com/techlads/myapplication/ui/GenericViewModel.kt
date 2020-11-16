@@ -1,20 +1,16 @@
 package com.techlads.myapplication.ui
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.techlads.myapplication.api.MediaHandler
 import com.techlads.myapplication.data.GenericMedia
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 
 /**
  * Created by Yasir on 11/13/2020.
  */
 
-class MoviesViewModel: ViewModel() {
+class GenericViewModel: ViewModel() {
     private var mediaHandler: MediaHandler? = null
 //    private val media: MutableLiveData<ArrayList<GenericMedia>> by lazy {
 //        MutableLiveData<ArrayList<GenericMedia>>().also {
@@ -26,7 +22,7 @@ class MoviesViewModel: ViewModel() {
 //        return media
 //    }
 
-    suspend fun loadMovies(): MutableLiveData<ArrayList<GenericMedia>>? {
+    suspend fun loadMovies(url: String): MutableLiveData<ArrayList<GenericMedia>>? {
 
         //              mediaHandler = MediaHandler()
 //            movies.value = mediaHandler?.getMovies()?.value
@@ -37,6 +33,6 @@ class MoviesViewModel: ViewModel() {
 //              mediaHandler = MediaHandler()
 //            movies.value = mediaHandler?.getMovies()?.value
 //        }
-        return MediaHandler().getMovies()
+        return MediaHandler().getMedia(url)
     }
 }

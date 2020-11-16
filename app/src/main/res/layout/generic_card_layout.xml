@@ -9,9 +9,15 @@
         android:id="@+id/cardTitleTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:layout_alignParentBottom="true"
         android:paddingBottom="30dp"
         android:gravity="center"
-        style="@style/LargeText"/>
-
+        android:maxLines="2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textColor="@color/white_color"
+        />
+<!--    style="@style/LargeText"-->
 </RelativeLayout>

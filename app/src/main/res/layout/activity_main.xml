@@ -17,7 +17,7 @@
         android:text="Movies"/>
 
     <Button
-        android:id="@+id/musicBtn"
+        android:id="@+id/videoSongsBtn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -42,5 +42,23 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_style"
         android:text="Islamic"/>
+
+    <Button
+        android:id="@+id/kidsBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_style"
+        android:text="Kids"/>
+
+    <Button
+        android:id="@+id/audioSongsBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_style"
+        android:text="Audio Songs"/>
 
 </LinearLayout>

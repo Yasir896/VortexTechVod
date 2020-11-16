@@ -2,15 +2,10 @@ package com.techlads.myapplication.ui
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.View
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.techlads.myapplication.R
 import com.techlads.myapplication.api.MediaHandler
 import com.techlads.myapplication.base.BaseActivity
-import com.techlads.myapplication.data.GenericMedia
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.base_header.*
 
@@ -32,17 +27,16 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
     override fun setEventListeners() {
         homeIv?.setOnClickListener(this)
-        searchIv?.setOnClickListener(this)
         moviesBtn?.setOnClickListener(this)
-        musicBtn?.setOnClickListener(this)
+        videoSongsBtn?.setOnClickListener(this)
         talkShowsBtn?.setOnClickListener(this)
         islamicBtn?.setOnClickListener(this)
+        kidsBtn?.setOnClickListener(this)
+        audioSongsBtn.setOnClickListener(this)
     }
 
     override fun setup() {
-
     }
-
 
     override fun isHome(): Boolean {
         return true
@@ -52,13 +46,13 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
         when (v) {
             homeIv -> {
-                startActivity(PlayerActivity.start(this))
+                startActivity(InitialSetupActivity.start(this))
             }
             moviesBtn -> {
                 startActivity(MoviesActivity.start(this))
             }
-            musicBtn -> {
-                startActivity(AudioSongsActivity.start(this))
+            videoSongsBtn -> {
+                startActivity(VideoSongsActivity.start(this))
             }
             talkShowsBtn -> {
                 startActivity(TalkShowsActivity.start(this))
@@ -66,6 +60,13 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             islamicBtn -> {
                 startActivity(IslamicActivity.start(this))
             }
+            kidsBtn -> {
+                startActivity(TalkShowsActivity.start(this))
+            }
+            audioSongsBtn -> {
+                startActivity(AudioSongsActivity.start(this))
+            }
         }
     }
+
 }

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5px"
     android:background="@color/grey"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
@@ -23,7 +24,26 @@
             android:hint="Enter Company Name">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/busNumberTV"
+                android:id="@+id/companyNameET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/colorPrimary"
+                android:textColorHighlight="@color/colorPrimary"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:theme="@style/TextInputLayoutAppearance"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="Enter Route Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/routeNameET"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorPrimary"
@@ -42,7 +62,7 @@
             android:hint="Enter Bus Number">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/seatNumberTV"
+                android:id="@+id/busNumberET"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorPrimary"
@@ -61,7 +81,7 @@
             android:hint="Enter Seat Number">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordTV"
+                android:id="@+id/seatNumberET"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorPrimary"
@@ -80,7 +100,7 @@
             android:hint="Enter App Exit Password">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/companyNameTV"
+                android:id="@+id/passwordTextET"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColorHint="@color/colorPrimary"
@@ -91,7 +111,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/send_email_btn"
+            android:id="@+id/submitBtn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
