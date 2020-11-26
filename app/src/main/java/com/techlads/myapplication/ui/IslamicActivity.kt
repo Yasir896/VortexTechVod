@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.base_header.*
 import kotlinx.coroutines.launch
 import java.util.ArrayList
 
-class IslamicActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked, View.OnClickListener{
+class IslamicActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked, View.OnClickListener {
 
     var viewModel: GenericViewModel? = null
     val SONGS_URL: String = "islamic/"

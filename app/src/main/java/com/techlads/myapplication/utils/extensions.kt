@@ -22,16 +22,21 @@ import com.techlads.myapplication.R
  * Created by Yasir on 11/3/2020.
  */
 
+val COMPANY_NAME = "companyName"
+val ROUTE_NAME = "routeName"
+val BUS_NUMBER = "busNumber"
+val SEAT_NUMBER = "seatNumber"
+val PASSWORD_TEXT = "password"
+
+val FIRST_RUN = "FirstRun";
+
 fun ImageView.loadUrl(url: String) {
 
     Glide.with(context).load(url).centerCrop().placeholder(R.drawable.defaultimg)
         .error(R.drawable.defaultimg).into(this)
 }
 
-
-
 fun View.addOverlayedBackground(url : String) {
-
 
     Glide.with(context)
         .load(url)

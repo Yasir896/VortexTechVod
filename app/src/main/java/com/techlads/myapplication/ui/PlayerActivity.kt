@@ -63,11 +63,11 @@ class PlayerActivity : BaseActivity() {
                 or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
     }
 
-
     private fun initializePlayer() {
         // Create a SimpleExoPlayer and set is as the player for content and ads.
         player = SimpleExoPlayer.Builder(this).build()
         playerView?.player = player
+        playerView.keepScreenOn = true
         adsLoader?.setPlayer(player)
         val dataSourceFactory: DataSource.Factory = DefaultDataSourceFactory(this, Util.getUserAgent(this, getString(R.string.app_name)))
         val mediaSourceFactory = ProgressiveMediaSource.Factory(dataSourceFactory)

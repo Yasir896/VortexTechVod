@@ -3,6 +3,7 @@ package com.techlads.myapplication.ui
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -11,10 +12,11 @@ import com.techlads.myapplication.base.BaseActivity
 import com.techlads.myapplication.data.GenericMedia
 import com.techlads.myapplication.utils.setLayoutManager
 import kotlinx.android.synthetic.main.activity_video_songs.*
+import kotlinx.android.synthetic.main.base_header.*
 import kotlinx.coroutines.launch
 import java.util.ArrayList
 
-class VideoSongsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked {
+class VideoSongsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemClicked, View.OnClickListener {
 
     var viewModel: GenericViewModel? = null
     val SONGS_URL: String = "videosongs/"
@@ -32,6 +34,7 @@ class VideoSongsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemCli
     }
 
     override fun setEventListeners() {
+        backBtn?.setOnClickListener(this)
     }
 
     override fun setup() {
@@ -60,6 +63,12 @@ class VideoSongsActivity : BaseActivity(), GenericMediaAdapter.OnRecyclerItemCli
 
     override fun onItemClicked(media: GenericMedia?, position: Int) {
         startActivity(PlayerActivity.start(this).putExtra("URL_STRING", media?.streamUrl))
+    }
+
+    override fun onClick(view: View?) {
+        if (view == backBtn){
+            finish()
+        }
     }
 
 }

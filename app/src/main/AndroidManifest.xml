@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.techlads.myapplication">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.VideoSongsActivity"></activity>
+        <activity android:name=".KidsActivity"></activity>
+        <activity android:name=".ui.VideoSongsActivity" />
         <activity android:name=".ui.PlayerActivity" />
         <activity android:name=".ui.AudioSongsActivity" />
         <activity

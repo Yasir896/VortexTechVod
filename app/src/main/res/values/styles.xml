@@ -45,6 +45,14 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="customButton" parent="Widget.AppCompat.Button">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
     <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
         <!-- reference our hint & error styles -->
         <item name="hintTextAppearance">@style/HintText</item>
